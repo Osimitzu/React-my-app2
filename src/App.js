@@ -1,5 +1,5 @@
 import './App.css';
-//import { useState } from 'react';
+import { useState } from 'react';
 import Foco from './components/Foco';
 
 function App() {
@@ -23,6 +23,14 @@ function App() {
   //   console.log ("Mamalonche")
   //   setIsVisible(!isVisible)
   // }
+
+  const [ isBright, setIsBright ] = useState (false); 
+
+    const toggleLight = ({}) => {
+        //console.log ("Funciona")
+        setIsBright(!isBright)
+    }
+
   return (
     <div className="App">
       {/* {/* <h2>{message}</h2>
@@ -36,7 +44,12 @@ function App() {
       
       <button onClick={togglePassword}> { isVisible ? "Ocultar contraseña" : "Mostrar contraseña" } </button>
       */}
-      <Foco/>
+      <Foco propIsBright={isBright} propToggleLight={toggleLight}/>
+      <Foco propIsBright={isBright} propToggleLight={toggleLight}/>
+      <Foco propIsBright={isBright} propToggleLight={toggleLight}/>
+      <Foco propIsBright={isBright} propToggleLight={toggleLight}/>
+      <Foco propIsBright={isBright} propToggleLight={toggleLight}/>
+      <Foco propIsBright={isBright} propToggleLight={toggleLight}/>
     </div>
   );
 }

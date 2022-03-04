@@ -7,10 +7,6 @@ body {
   /*background-color: blue;*/
   margin-top: 40px;
   padding: 30px;
-}
-
-.object{
-  /*background-color: aqua;*/
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
@@ -35,5 +31,6 @@ body {
 button {
   background-color: pink;
   font-size: xx-large;
+  border-radius: 25%;
 }
 

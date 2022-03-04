@@ -1,42 +1,11 @@
 import React, { useState } from 'react';
 
-const Foco = () => {
-
-    const [ isBright, setIsBright ] = useState (false); 
-
-    const power = () => {
-        //console.log ("Funciona")
-        setIsBright(!isBright)
-    }
+const Foco = ({propIsBright, propToggleLight}) => {
 
     return (
         <div>
-            <div className='object'>
-                <div className='item'>
-                    <div className={ `foco ${isBright ? "focoOn" : "focoOff"}`}></div>
-                    <button onClick={power}>{ isBright ? "off" : "on" }</button>
-                </div>
-                <div className='item'>
-                    <div className={ `foco ${isBright ? "focoOn" : "focoOff"}`}></div>
-                    <button onClick={power}>{ isBright ? "off" : "on" }</button>
-                </div>
-                <div className='item'>
-                    <div className={ `foco ${isBright ? "focoOn" : "focoOff"}`}></div>
-                    <button onClick={power}>{ isBright ? "off" : "on" }</button>
-                </div>
-                <div className='item'>
-                    <div className={ `foco ${isBright ? "focoOn" : "focoOff"}`}></div>
-                    <button onClick={power}>{ isBright ? "off" : "on" }</button>
-                </div>
-                <div className='item'>
-                    <div className={ `foco ${isBright ? "focoOn" : "focoOff"}`}></div>
-                    <button onClick={power}>{ isBright ? "off" : "on" }</button>
-                </div>
-                <div className='item'>
-                    <div className={ `foco ${isBright ? "focoOn" : "focoOff"}`}></div>
-                    <button onClick={power}>{ isBright ? "off" : "on" }</button>
-                </div>
-            </div>
+            <div className={ `foco ${propIsBright ? "focoOn" : "focoOff"}`}></div>
+            <button onClick={propToggleLight}>{ propIsBright ? "off" : "on" }</button>
         </div>
     );
 };
