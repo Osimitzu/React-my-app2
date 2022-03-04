@@ -26,7 +26,7 @@ function App() {
 
   const [ isBright, setIsBright ] = useState (false); 
 
-    const toggleLight = ({}) => {
+    const toggleLight = () => {
         //console.log ("Funciona")
         setIsBright(!isBright)
     }
